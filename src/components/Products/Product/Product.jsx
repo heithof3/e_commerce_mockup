@@ -2,12 +2,14 @@ import { Card, CardMedia, CardContent, CardActions, Typography, IconButton } fro
 import { AddShoppingCart } from "@material-ui/icons";
 
 
-import useStyles from "./productStyles.js"
+import useStyles from "./productStyles"
 
 const Product = ({ product, onAddToCart }) => {
     const classes = useStyles();
 
     const handleAddToCart = () => onAddToCart(product.id, 1);
+
+    console.log(product)
 
     return (
          <Card className={classes.root}>
